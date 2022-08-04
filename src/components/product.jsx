@@ -8,9 +8,9 @@ const Product = () => {
   
   return (
     <div className="product-name">
-      <img src="orangepic.jpg" alt="Product" />
+      <img src="neworanges.jpg" alt="Product" />
 
-      <h1>Product Name</h1>
+      <h1 className="product-title">Product Name</h1>
       
       <QuantityPicker></QuantityPicker>
     </div>

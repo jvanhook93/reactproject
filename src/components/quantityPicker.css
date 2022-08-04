@@ -1,0 +1,18 @@
+.addition {
+  background-color: #dedede;
+  padding: 3px 5px 3px 5px;
+}
+
+.subtract {
+  background-color: #dedede;
+  padding: 3px 5px 3px 5px;
+}
+
+.quantity-number {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  color: black;
+  border: 1px solid black;
+  background-color: #dedede;
+}

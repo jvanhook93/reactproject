@@ -18,9 +18,9 @@ const QuantityPicker = () => {
 
   return( 
   <div className="qt-picker">
-    <button onClick={Increase}>+</button>
-    <label >{quantity}</label>
-    <button onClick={Decrease}>-</button>
+    <button onClick={Increase} className="addition">+</button>
+    <label className="quantity-number">{quantity}</label>
+    <button onClick={Decrease} className="subtract">-</button>
   </div>
   );
 };

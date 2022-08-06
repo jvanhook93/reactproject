@@ -3,16 +3,18 @@ import "./quantityPicker"
 import { useState } from "react";
 import QuantityPicker from "./quantityPicker";
 
-const Product = () => {
-  const [product, setProduct] = useState('');
-  
-  return (
-    <div className="product-name">
-      <img src="neworanges.jpg" alt="Product" />
+const Product = (props) => {
 
-      <h1 className="product-title">Product Name</h1>
+  return (
+    <div className="product">
+      <img src={'images/' + props.data.image} alt="Product" />
+
+      <h5>{props.data.title}</h5>
+
+      <label>Total: {props.data.price.toFixed(2)}</label>
+      <label>Price: {props.data.price.toFixed(2)}</label>
       
-      <QuantityPicker></QuantityPicker>
+      <QuantityPicker />
     </div>
   );
 };

@@ -4,9 +4,10 @@
 
 .catalog .product-list {
   display: inline-block;
-  width: 280px;
+  width: 200px;
   height: 320px;
   border: 1px solid #fafafa;
   margin-bottom: 10px;
   margin-left: 10px;
+  
 }

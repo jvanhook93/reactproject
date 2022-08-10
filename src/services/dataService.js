@@ -2,7 +2,7 @@ var catalog = [
   {
     _id: "1",
     title:"Oranges",
-    price: 12.00,
+    price: 12.02,
     category: "Fruit",
     image: "neworanges.jpg",
 
@@ -11,7 +11,7 @@ var catalog = [
   {
     _id: "2",
     title: "Apples",
-    price:12.00,
+    price:12.30,
     category:"Fruit",
     image: "Apples.jpg"
   },
@@ -19,21 +19,21 @@ var catalog = [
   {
     _id: "3",
     title: "Kiwi",
-    price:10.00,
+    price:10.14,
     category: "Fruit",
     image: "kiwi.jpg",
   },
 
   {
-    _id: "3",
+    _id: "4",
     title: "pears",
-    price:15.00,
+    price:15.67,
     category: "Fruit",
     image: "pears.jpg",
   },
 
   {
-    _id: "4",
+    _id: "5",
     title: "Watermelon",
     price:20.00,
     category: "Fruit",

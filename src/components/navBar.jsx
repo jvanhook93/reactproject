@@ -3,18 +3,18 @@ import './navBar.css';
 const NavBar = () => {
   return (
     <div>
-      <ul class="nav nav-pills nav-justified">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <ul className="nav nav-pills nav-justified">
+  <li className="nav-item">
+    <a className="nav-link active" aria-current="page" href="#">Home</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">About</a>
+  <li className="nav-item">
+    <a className="nav-link" href="#">About</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Social Medias</a>
+  <li className="nav-item">
+    <a className="nav-link" href="#">Social Medias</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+  <li className="nav-item">
+    <a className="nav-link disabled">Disabled</a>
   </li>
 </ul>
     </div>

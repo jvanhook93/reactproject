@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const ShoppingList = () => {
   const [text, setText] = useState("");
-  const [items, setItem] = useState([]);
+  const [items, setItems] = useState([]);
   /**
    * 
    * create a state variable: items []
@@ -14,9 +14,15 @@ const ShoppingList = () => {
   
 
   const save = () => {
-    console.log(text);
-    items.push(text);
+   
+    let clone = [...items];
+    clone.push(text);
+    setItems(clone);
+      
+
   };
+
+  
 
   const textChange = (e) => {
     let value = e.target.value;
@@ -38,7 +44,7 @@ const ShoppingList = () => {
 
       <ul>
         {items.map((item) => (
-          <li>{item}</li>
+          <li key={item}>{item}</li>
         ))};
       </ul>
     </div>

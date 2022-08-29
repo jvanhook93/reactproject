@@ -13,7 +13,7 @@ const Catalog = () => {
     let prods = service.getCatalog();
     setProducts(prods);
 
-    let uniques = [];
+    let uniques = []; 
     for(let i=0; i< prods.length; i++){
       let prod = prods[i];
       // if the category does NOT exist in the uniques array, add it

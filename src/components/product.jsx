@@ -1,17 +1,24 @@
 import "./product.css";
 import "./quantityPicker"
-import { useState } from "react";
+import { useState, useContext } from "react";
 import QuantityPicker from "./quantityPicker";
+import StoreContext from '../store/storeContext';
 
 const Product = (props) => {
   const [quantity, setQuantity] = useState(1);
-
+  const addToCart = useContext(StoreContext).addToCart;
   const add2Cart = () => {
     console.log (props.data.title);
   };
 
+  const handleAddClick = () => {
+
+    let prodForCart = {...props.data, quantity: quantity};
+    addToCart(prodForCart);
+
+  }
+
   const onQuantityChange = (quantity) => {
-    console.log("quantity changes", quantity);
     setQuantity(quantity);
   };
 

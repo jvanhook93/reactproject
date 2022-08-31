@@ -36,3 +36,5 @@ const GlobalState = (props) => {
         }}></StoreContext.Provider>
     )
 }
+
+export default GlobalState;

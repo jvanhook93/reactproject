@@ -1,22 +1,32 @@
 import "./admin.css";
+import React from 'react';
 import { useState } from 'react';
+import DataService from '../services/dataService.js';
 
 const Admin = () => {
     const [product, setProduct] = useState({})
     const [coupon, setCoupon] = useState({})
+    const [showProdSuccess, setShowProdSuccess] = useState(false);
 
 
-  const saveProduct = () => {
+  const saveProduct = async () => {
     console.log('Saving Product');
     console.log(product);
+
+    let fixedProd = {...product};
+    fixedProd.price = +fixedProd.price;
+
+    let service = new DataService();
+    let savedProd = await ServiceWorker.saveProduct(product);
+    
+    if (savedProd && savedProd._id) {
+      setShowProdSuccess(true);
+
+      setTimeout (() => {setShowProdSuccess(false)}, 1000 );
+    }
   };
 
-  const saveCoupon = () => {
-    console.log('Saving Coupon Code');
-    console.log(coupon);
-  }
-
-    const textChange = (e) => {
+  const textChange = (e) => {
       let value = e.target.value;
       let name = e.target.name;
 
@@ -24,6 +34,13 @@ const Admin = () => {
       copy[name] = value;
       setProduct(copy);
       };
+  
+  const saveCoupon = () => {
+    console.log('Saving Coupon Code');
+    console.log(coupon);
+  }
+
+    
   const couponChange = (e) => {
       let value = e.target.value;
       let name = e.target.name;
@@ -39,6 +56,8 @@ const Admin = () => {
   
   <div className="admin">
     <h1>Store administration</h1>
+
+    {showProdSuccess ? <div className="alert alert-success">Product Saved</div> : null}
 
     <div className="parent">
       <section className="products">
